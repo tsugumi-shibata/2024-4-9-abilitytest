@@ -24,14 +24,15 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'last_name'=>['required','string'],
-            'first_name'=>['required','string'],
-            'gender'=>['required'],
-            'email'=>['required','email','string'],
-            'tel'=>['required','numeric','digits_between:1,5'],
-            'address'=>['required','string'],
-            'category'=>['required'],
-            'detail'=>['required|max:120'],
+            'last_name'=>'required|string|max:255',
+            'first_name'=>'required|string|max:255',
+            'gender'=>'required',
+            'email'=>'required|email|string|max:255',
+            'tel'=>'required|numeric|digits_between:1,5',
+            'address'=>'required|string|max:255',
+            'building' =>'nullable|max:255',
+            'category'=>'required',
+            'detail'=>'required|max:120',
         ];
     }
 

@@ -1,6 +1,10 @@
-/* .contact-form__content{ */
+.contact-form__content{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-/* contact */
+
 .contact-form__header{  
     color: #8B7969;
     text-decoration: none;
@@ -41,9 +45,27 @@
     border: none;
     padding:10px;
     width: 100%;
+    text-align: left;
     
 }
 .form__input-category{
     color: #8B7969;
 }
 
+.form__error{
+    color: coral;
+    font-size: 10px;
+}
+
+.form__button-submit{
+    background-color: #82756a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}

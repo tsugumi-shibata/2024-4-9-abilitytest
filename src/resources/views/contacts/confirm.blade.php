@@ -10,24 +10,15 @@
     <div class="confirm__header">
         <h2>Confirm</h2>
     </div>
-    <form action="/contacts" class="form" method="post">
+    <form action="/contacts/confirm" class="form" method="post">
         @csrf
         <div class="confirm-table">
             <table class="confirm-table__inner">
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お名前</th>
                     <td class="confirm-table__text">
-                        <!-- valueで受け取った値を埋め込み -->
-                        <input type="text" name="last_name" value="{{ isset($contact['last_name']) ? $contact['last_name'] : '' }}" readonly/>
+                        <input type="text" name="full_name" value="{{ $fullName }}" readonly/>
                     </td>
-                </tr>
-                <tr class="confirm-table__row">
-                    <th class="confirm-table__header"> </th>
-                    <td class="confirm-table__text">
-                        <!-- valueで受け取った値を埋め込み -->
-                        <input type="text" name="first_name" value="{{ isset($contact['first_name']) ?$contact['first_name'] : '' }}" readonly/>
-                    </td>
-                </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">メールアドレス</th>
                     <td class="confirm-table__text">
